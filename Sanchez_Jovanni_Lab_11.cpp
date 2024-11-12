@@ -5,6 +5,7 @@
 #include <cmath>
 #include <ctime>
 #include <cstdlib>
+#include <iostream>
 using namespace std;
 
 const int ARRAY_SIZE = 50;
