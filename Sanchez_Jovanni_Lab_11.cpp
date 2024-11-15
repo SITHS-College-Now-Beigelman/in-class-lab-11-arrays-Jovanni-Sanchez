@@ -15,8 +15,8 @@ int main()
 {
     int currentItem;
     int sumOfArray = 0;
-    double alpha[ARRAY_SIZE];
     int numbersPrinted = 0;
+    double alpha[ARRAY_SIZE];
 
     srand(time(0));
 
