@@ -9,14 +9,14 @@
 using namespace std;
 
 const int ARRAY_SIZE = 50;
-const int PRINTED_VALUE_LIMIT = 10;
+const int NUMBERS_PER_LINE = 10;
 
 int main()
 {
     int currentItem;
     int sumOfArray = 0;
     double alpha[ARRAY_SIZE];
-    int printedValueCounter = 0;
+    int numbersPrinted = 0;
 
     srand(time(0));
 
@@ -28,20 +28,20 @@ int main()
         }
         else
         {
-            alpha[currentItem] = (rand() % 100 + 1) * 3; 
+            alpha[currentItem] = (rand() % 100 + 1) * 3;
         }
 
-        if (printedValueCounter != PRINTED_VALUE_LIMIT)
+        if (numbersPrinted != NUMBERS_PER_LINE)
         {
             cout << alpha[currentItem] << " ";
         }
         else
         {
             cout << "\n";
-            printedValueCounter = 0;
+            numbersPrinted = 0;
         }
 
-        printedValueCounter++;
+        numbersPrinted++;
         sumOfArray = sumOfArray + alpha[currentItem];
     }
 
