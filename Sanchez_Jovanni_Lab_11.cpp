@@ -35,20 +35,19 @@ int main()
 
         if (numbersPrinted != NUMBERS_PER_LINE)
         {
-            // If the numbers printed so far isnt the limit of numbers per line,
-            // keep printing. Each number is seperated with a space
+            /* If the numbers printed so far isnt the limit of numbers per line,
+            keep printing. Each number is seperated with a space */
             cout << alpha[currentItem] << " ";
         }
         else
         {
-            // Once the limit has been reached, start a new line and reset the
-            // counter to keep looping until we reach the end of the array
+            /* Once the limit has been reached, start a new line and reset the
+            counter to keep looping until we reach the end of the array */
             cout << "\n";
             numbersPrinted = 0;
         }
 
-        numbersPrinted++;
-        // Count a number printed for every item
+        numbersPrinted++; // Count a number printed for every item
         sumOfArray = sumOfArray + alpha[currentItem];
         // The sum is equal to its current value + the value of the current item
     }
