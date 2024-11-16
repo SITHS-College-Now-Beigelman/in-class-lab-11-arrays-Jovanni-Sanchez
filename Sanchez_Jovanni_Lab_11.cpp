@@ -15,6 +15,7 @@ int main()
 {
     int currentItem;          // Used for iterating the items within "alpha"
     int sumOfArray = 0;       // Will be assinged to the sum of all items
+    int numbersPrinted = 0;   // The amount of numbers printed in a line
     double alpha[ARRAY_SIZE]; // The array everything will be stored in
 
     srand(time(0));
@@ -31,9 +32,6 @@ int main()
         {
             alpha[currentItem] = (rand() % 100 + 1) * 3;
         }
-
-        int numbersPrinted = 0;
-        // Keeps track of how many numbers have been printed so far
 
         if (numbersPrinted != NUMBERS_PER_LINE)
         {
