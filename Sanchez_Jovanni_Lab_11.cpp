@@ -13,12 +13,15 @@ const int NUMBERS_PER_LINE = 10; // How many numbers should be in each line
 
 int main()
 {
-    int currentItem;          // Used for iterating the items within "alpha"
-    int sumOfArray = 0;       // Will be assinged to the sum of all items
-    int numbersPrinted = 0;   // The amount of numbers printed in a line
-    double alpha[ARRAY_SIZE]; // The array everything will be stored in
+    int currentItem;           // Used for iterating the items within "alpha"
+    int sumOfArray = 0;        // Will be assinged to the sum of all items
+    int numbersPrinted = 0;    // The amount of numbers printed in a line
+    int numbersExactly100 = 0; // Tracks how many numbers are exactly 100
+    double alpha[ARRAY_SIZE];  // The array everything will be stored in
 
     srand(time(0));
+
+    cout << "\n"; // for clarity
 
     for (currentItem = 0; currentItem != ARRAY_SIZE; currentItem++)
     {
@@ -31,6 +34,11 @@ int main()
         else // 25-49 (The rest of the 50 items)
         {
             alpha[currentItem] = (rand() % 100 + 1) * 3;
+        }
+
+        if (alpha[currentItem] == 100)
+        {
+            numbersExactly100++;
         }
 
         if (numbersPrinted != NUMBERS_PER_LINE)
@@ -54,6 +62,15 @@ int main()
 
     // Find and Print the average of the array
     cout << "\nThe average of the array is " << sumOfArray / 50;
+
+    if (numbersExactly100 > 0)
+    // Makes sure it only prints if there is at one number equal to 100
+    {
+        cout << "\nThe amount of numbers within the array exactly 100 is "
+             << numbersExactly100 << ".";
+    }
+
+    cout << "\n\n"; // for clarity
 
     return 0;
 }
